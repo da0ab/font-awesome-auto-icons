@@ -1,0 +1,101 @@
+a { 
+        text-decoration:none;
+        color:$link-color;
+}
+
+a[href^="mailto:"]:before {
+        font-family:$icon-font;
+        content:'\f0e0  ';
+        color:$link-color;
+}
+a[href^="tel:"]:before {
+        font-family:$icon-font;
+        content:'\f095  ';
+        color:$link-color;
+}
+
+*:before
+{
+        font-family:$icon-font;
+        text-decoration: none !important;
+        font-weight: 100;
+        white-space: nowrap;
+}
+// social auto icon
+
+[href*="twitter.com"]:before {
+        content:'\f081  ';
+        color: #5EA9DD;
+}
+[href*="facebook.com"]:before {
+        content: '\f230  ';
+        color: #3B5998;
+}
+[href*="plus.google.com"]:before {
+        content: '\f0d5  ';
+        color: #C03121;
+}
+[href*="youtube.com"]:before,
+[href*="youtu.be"]:before {
+        content: '\f166  ';
+        color: #B02C27;
+}
+[href*="vk.com"]:before,
+[href*="vk.ru"]:before {
+        content:'\f189  ';
+        color:#4C75A3;
+}
+[href*="ok.ru"]:before {
+        content:'\f263  ';
+        color: #FA890F;
+}
+[href*="instagram.com"]:before {
+        content:'\f16d  ';
+        color: #6A5043;
+}
+a[href^="/rss.xml"]:before,
+[href$=".rss"]:before,
+[href$="rss.xml"]:before,
+[href*="/feed/"]:before,
+[href*="/rss/"]:before
+[href*="/rss"]:before
+{
+        content: '\f09e  ';
+        color: #FF6600;
+}
+
+// files auto icon
+
+a[href$=".xls"]:before {
+        content: '\f1c3  ';
+        color:#2B4D0C;
+
+}
+a[href$=".doc"]:before {
+        content: '\f1c2  ';
+        color: #134C72;
+}
+a[href$=".pdf"]:before {
+        content: '\f1c1  ';
+        color: #B61E1E;
+}
+a[href$=".zip"]:before,
+[href$=".rar"]:before,
+[href$=".7zip"]:before {
+        content: '\f1c6  ';
+        color: #4EA8A8;
+}
+*::after
+{
+        content: '' !important;
+}
+*:hover:before {
+        transition: all 0.3s linear 0s;
+        color: $link-color;
+}
+*:not(:hover):before {
+        transition: all 0.3s linear 0s;
+}
+.banner a:after, .banner a:before {
+        content: '' !important;
+}
